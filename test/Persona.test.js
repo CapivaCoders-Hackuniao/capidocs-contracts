@@ -47,12 +47,12 @@ describe("Deployment", function () {
 		await Registry.deployed();
 	});
 
-	it("must save DEFAULT ADMIN ROLE at deploy", async function () {
+	it("Celo save DEFAULT ADMIN ROLE at deploy", async function () {
 		const DEFAULT_ADMIN_ROLE = "0x0000000000000000000000000000000000000000000000000000000000000000";
 		expect(await Registry.hasRole(DEFAULT_ADMIN_ROLE, ownerRegistry._address)).to.equal(true);
 	});
 
-	it("must register name correctly", async function () {
+	it("Celo register name correctly", async function () {
 		expect(await Registry.name()).to.equal(registryName);
 	});
 });
